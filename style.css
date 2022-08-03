@@ -1,6 +1,43 @@
 @font-face {
   font-family: "Jakarta sans-serif";
-  src: url(sansation_light.woff);
+  src: url(Fonts/PlusJakartaSans-Light.woff2) format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Jakarta sans-serif";
+  src: url(Fonts/PlusJakartaSans-Regular.woff2) format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Jakarta sans-serif";
+  src: url(Fonts/PlusJakartaSans-Medium.woff2) format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Jakarta sans-serif";
+  src: url(Fonts/PlusJakartaSans-SemiBold.woff2) format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Jakarta sans-serif";
+  src: url(Fonts/PlusJakartaSans-Bold.woff2) format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Jakarta sans-serif";
+  src: url(Fonts/PlusJakartaSans-ExtraBold.woff2) format("woff2");
+  font-weight: 800;
+}
+
+h1 {
+  font-family: "Jakarta sans-serif", sans-serif;
+  font-weight: 800;
+  font-size: 7rem;
 }
 
 *,
