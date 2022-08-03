@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "Jakarta sans-serif";
+  src: url(sansation_light.woff);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@root {
+  /* Color schemes */
+  --offWhite: #fcfcfc;
+  --black: #000000;
+  --white: #ffffff;
+  --darkGrey: #202020;
+
+  --primary-color-900: hsl(18, 100, 51);
+  --primary-color-800: ;
+  --primary-color-700: ;
+  --primary-color-600: ;
+  --primary-color-500: ;
+  --primary-color-400: ;
+  --primary-color-300: ;
+  --primary-color-200: ;
+  --primary-color-100: ;
+
+  /* Font families */
+
+  --Header-font-family: "Plus Jakarta Sans", sans-serif;
+
+  /* Font sizes ---  Pixels er konverteret til rem, derefter er (fluid-typography.netlify.app/) anvendt 
+  til at skabe responsiv Clamp funktion*/
+
+  --Text-size-XXLarge: clamp(2.375rem, 2.6vw + 1.7rem, 4.209rem);
+  --Text-size-XLarge: clamp(1.75rem, 0.6vw + 1.6rem, 2.369rem);
+  --Text-size-Large: clamp(1.333rem, 0.5vw + 1.2rem, 1.777rem);
+
+  --text-size-body-large: 1.333rem;
+  --text-size-body: 1rem;
+
+  /* Font colors */
+
+  /* Font Opacities */
+
+  /* Spacing Variables*/
+
+  --section-padding: 112px;
+  --grid-gap-mobile: 10px;
+  --grid-gap-desktop: 20px;
+
+  --margin-mobile: 16px;
+  --margin-tablet: 96px;
+  --margin-desktop: 128px;
+
+  /* Box shadows */
+
+  /* -----------Custom CSS Properties------------------ */
+
+  /* Color schemes */
+
+  /* Font sizes */
+
+  /* Font colors */
+
+  /* Font Opacities */
+
+  /* Spacing Variables*/
+}
+
+@media (min-width: 810px) {
+  @root {
+  }
+}
+
+@media (min-width: 1366px) {
+  @root {
+  }
+}
