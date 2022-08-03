@@ -1,3 +1,5 @@
+/* Import af custom fonte  */
+
 @font-face {
   font-family: "Jakarta sans-serif";
   src: url(Fonts/PlusJakartaSans-Light.woff2) format("woff2");
@@ -34,19 +36,7 @@
   font-weight: 800;
 }
 
-h1 {
-  font-family: "Jakarta sans-serif", sans-serif;
-  font-weight: 800;
-  font-size: 7rem;
-}
-
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* ---------------CSS Variabler-------------------------*/
 
 @root {
   /* Color schemes */
@@ -55,19 +45,20 @@ h1 {
   --white: #ffffff;
   --darkGrey: #202020;
 
-  --primary-color-900: hsl(18, 100, 51);
-  --primary-color-800: ;
-  --primary-color-700: ;
-  --primary-color-600: ;
-  --primary-color-500: ;
-  --primary-color-400: ;
-  --primary-color-300: ;
-  --primary-color-200: ;
-  --primary-color-100: ;
+  --primary-color-600: hsl(20, 100, 50);
+  --primary-color-500: hsl (20, 100, 60);
+  --primary-color-400: hsl(20, 100, 70);
+  --primary-color-300: hsl(20, 100, 80);
+  --primary-color-200: hsl(20, 100, 90);
+  --primary-color-100: hsl(20, 100, 99);
+
+  --alert-color: hsl(348, 79, 49);
+  --succes-color: hsl(143, 79, 39);
 
   /* Font families */
 
   --Header-font-family: "Plus Jakarta Sans", sans-serif;
+  --body-font-family: "Lato", sans-serif;
 
   /* Font sizes ---  Pixels er konverteret til rem, derefter er (fluid-typography.netlify.app/) anvendt 
   til at skabe responsiv Clamp funktion*/
@@ -78,10 +69,42 @@ h1 {
 
   --text-size-body-large: 1.333rem;
   --text-size-body: 1rem;
+  --text-size-body-small: 0.75rem;
+
+  --text-size-button: 1.11rem;
 
   /* Font colors */
 
+  --text-color-white: #ffffff;
+  --text-color-black: #000000;
+  --text-color-orange: hsl(20, 100, 50);
+
   /* Font Opacities */
+
+  --opacity-base: 100%;
+  --opacity-high-emphasis: 95%;
+  --opacity-medium-emphasis: 85%;
+  --opacity-low-emphasis: 65%;
+
+  /* Font letter spacing */
+
+  --text-kerning-header: 
+
+  /* Font Line height */
+
+  --text-leading-XXlarge-mobile: 56px;
+  --text-leading-Xlarge-mobile: 42px;
+  --text-leading-large-mobile: 28px;
+  --text-leading-medium-mobile: 25px;
+  --text-leading-base-mobile: 25px;
+
+--text-leading-XXlarge-desktop: 75px;
+  --text-leading-Xlarge-desktop: 50px;
+  --text-leading-large-desktop: 30px;
+  --text-leading-medium-desktop: 26px;
+  --text-leading-base-desktop: 25px;
+
+ 
 
   /* Spacing Variables*/
 
@@ -95,8 +118,16 @@ h1 {
 
   /* Box shadows */
 
+  --box-shadow-grey-webkit: -webkit-box-shadow: 0px 27px 48px 11px rgba(179,179,179,0.31);
+  --box-shadow-grey-moz: -moz-box-shadow: 0px 27px 48px 11px rgba(179,179,179,0.31);
+  --box-shadow-grey: box-shadow: 0px 27px 48px 11px rgba(179,179,179,0.31);
+
+
   /* -----------Custom CSS Properties------------------ */
 
+
+
+  
   /* Color schemes */
 
   /* Font sizes */
@@ -106,6 +137,14 @@ h1 {
   /* Font Opacities */
 
   /* Spacing Variables*/
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: 810px) {
