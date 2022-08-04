@@ -284,9 +284,7 @@ button {
     padding-left: 10px;
 }
 
-.secondaryButton::before {
-    border-bottom: 2px solid black;
-}
+
 /*  ------------------Navigation styling -----------*/
 
 
@@ -303,7 +301,7 @@ nav {
   position: fixed;
   width: 100vw;
   z-index: 9999;
-  /* background-color: var(--bg-color); */
+  background-color: var(--bg-color);
   top: 0;
 }
 
@@ -515,7 +513,16 @@ h2 {
 }
 
 
+.aboutFront {
+    margin-top: -7rem;
+    
+    background-color: #ff4d0037;
+    padding-block: 3rem;
+}
 
+.aboutFront .aboutbgwrap {
+    margin-inline: var(--margin-mobile);
+}
 
 
 
