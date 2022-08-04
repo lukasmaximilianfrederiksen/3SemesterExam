@@ -16,7 +16,7 @@ tl.fromTo(
     duration: 0.5,
     opacity: 1,
     y: "0%",
-    stagger: 0.25,
+    stagger: 0.2,
   }
 );
 

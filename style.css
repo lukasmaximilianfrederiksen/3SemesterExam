@@ -179,6 +179,21 @@ body{
 
 
 /*  ------------------Navigation styling -----------*/
+
+
+nav {
+  padding-inline: var(--margin-mobile);
+  padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+  z-index: 9999;
+  /* background-color: var(--bg-color); */
+  top: 0;
+}
+
 ul {
   list-style-type: none;
 }
@@ -196,19 +211,6 @@ a:visited {
   color: var(--text-color);
 }
 
-nav {
-  padding-inline: var(--margin-mobile);
-  padding-block: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  width: 100vw;
-  z-index: 9999;
-  /* background-color: var(--bg-color); */
-  top: 0;
-}
-
 .line {
   width: 30px;
   height: 3px;
@@ -220,7 +222,7 @@ nav {
   text-decoration: none;
   color: black;
   right: 100px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--Header-font-family);
   font-size: 2rem;
   font-weight: 500;
 }
@@ -264,7 +266,7 @@ nav {
   color: white;
   transition: 2s;
   font-family: var(--Header-font-family);
-  font-size: var(--text-size-body-large);
+  font-size: var(--Text-size-XLarge);
   
   font-weight: 500;
   mix-blend-mode: difference;
