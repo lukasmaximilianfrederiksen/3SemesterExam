@@ -38,10 +38,9 @@
 
 /* ---------------CSS Variabler-------------------------*/
 
-@root {
+:root {
   /* Color schemes */
   --offWhite: #fcfcfc;
-  --black: #000000;
   --white: #ffffff;
   --darkGrey: #202020;
 
@@ -76,8 +75,8 @@
   /* Font colors */
 
   --text-color-white: #ffffff;
-  --text-color-black: #000000;
-  --text-color-orange: hsl(20, 100, 50);
+  --text-color-darkgrey: #202020;
+  --text-color-orange: hsl(20, 100, 60);
 
   /* Font Opacities */
 
@@ -88,7 +87,15 @@
 
   /* Font letter spacing */
 
-  --text-kerning-header: 
+  --text-kerning-h1-mobile: 10%;
+  --text-kerning-h1-desktop: 2px;
+
+  --text-kerning-h2-mobile: 10%;
+  --text-kerning-h2-mobile: 10%;
+
+  --text-kerning-h3-mobile: 10%;
+  --text-kerning-h3-mobile: 10%;
+  
 
   /* Font Line height */
 
@@ -104,11 +111,15 @@
   --text-leading-medium-desktop: 26px;
   --text-leading-base-desktop: 25px;
 
- 
 
   /* Spacing Variables*/
 
-  --section-padding: 112px;
+  --section-padding-mobile: 80px;
+  --section-padding-desktop: 112px;
+
+  --title-padding-mobile: 32px;
+  --title-padding-desktop: 32px;
+
   --grid-gap-mobile: 10px;
   --grid-gap-desktop: 20px;
 
@@ -125,20 +136,30 @@
 
   /* -----------Custom CSS Properties------------------ */
 
-
-
-  
   /* Color schemes */
+
+  --bg-color: var(--offWhite);
+  --footer-bg-color: var(--darkGrey);
+  --card-bg-color: var(--white);
+
+  --button-bg-color: var(--primary-color-600);
+  --button-bg-color-hover: var(--primary-color-400);
 
   /* Font sizes */
 
-  /* Font colors */
+  --header1-size: var(--Text-size-XXLarge);
+  --header2-size: var(--Text-size-XLarge);
+  --header3-size: var(--Text-size-Large);
 
-  /* Font Opacities */
+  --paragraph-large: var(--text-size-body-large);
+  --paragraph: var(--text-size-body);
+  --paragraph-small: var(--text-size-body-small);
+  --button-text: var(--text-size-button);
 
-  /* Spacing Variables*/
 }
 
+
+/* Reset boxmodel */
 *,
 ::before,
 ::after {
@@ -147,12 +168,187 @@
   padding: 0;
 }
 
-@media (min-width: 810px) {
-  @root {
-  }
+
+main {
+    margin-inline: var(--margin-mobile);
 }
 
-@media (min-width: 1366px) {
-  @root {
+body{
+    background-color: var(--bg-color);
+}
+
+
+/*  ------------------Navigation styling -----------*/
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+nav {
+  padding-inline: var(--margin-mobile);
+  padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+  z-index: 9999;
+  /* background-color: var(--bg-color); */
+  top: 0;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+.openMenu {
+  text-decoration: none;
+  color: black;
+  right: 100px;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.closeMenu {
+  position: absolute;
+
+  text-decoration: none;
+  color: white;
+  top: 1rem;
+  right: 3rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  z-index: 99;
+}
+
+.closeMenu:hover {
+  cursor: pointer;
+}
+
+
+.ul {
+  position: absolute;
+  left: 20%;
+  display: flex;
+  width: 300px;
+  justify-content: center;
+  align-items: left;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.ul li {
+  margin: 20px 0;
+  z-index: 2;
+}
+
+.ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 2s;
+  font-family: var(--Header-font-family);
+  font-size: var(--text-size-body-large);
+  
+  font-weight: 500;
+  mix-blend-mode: difference;
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ff4d00;
+  transform: translateX(-100%);
+}
+.menu .button {
+  color: white;
+}
+
+
+.deskTopNav {
+  display: none;
+}
+
+
+
+
+
+
+
+@media (min-width: 810px) {
+  
+    main {
+    margin-inline: var(--margin-tablet);
+}
+
+ .menuKnap {
+    display: none;
   }
+
+
+}
+
+
+
+
+@media (min-width: 1366px) {
+    main {
+    margin-inline: var(--margin-desktop);
+}
+
+  .deskTopNav {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--Header-font-family);
+    font-weight: 500;
+  }
+
+  .deskNavLink {
+    display: inline-block;
+    position: relative;
+    color: rgb(255, 255, 255);
+  }
+
+  .deskNavLink::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ef0e0e;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .deskNavLink:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .deskNavLink a {
+    color: white;
+  }
+ 
 }
