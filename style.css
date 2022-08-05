@@ -565,15 +565,16 @@ h2 {
 
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows:1fr 3fr 1fr;
+    grid-template-rows: minmax(0, 1fr) 300px;
     gap: 16px;
     margin-inline: var(--margin-desktop);
+    
 }
 
 .introTextGrid{
     grid-column: 1/6;
-    grid-row: 2;
-    max-width: 75ch;
+    grid-row: 2/4;
+    max-width: 65ch;
 }
 
 .introTextGrid h2 {
@@ -583,8 +584,8 @@ h2 {
 
 
 .introImgGrid {
-    grid-column: 6/13;
-    grid-row: 1/4;
+    grid-column: 7/13;
+    grid-row: 1/6;
 }
 }
 
@@ -633,18 +634,36 @@ h2 {
     .produktListFrontPage {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        grid-template-rows:  1fr 1fr 1fr 1fr;
+        grid-template-rows:  1fr ;
         gap: 16px;
     }
 
+    .imageStackContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: var(--section-padding-mobile);
+}
+
 .imageStackContainer {
     grid-column:  1/4;
-    grid-row: 1/4;
+    grid-row: 1/2;
+}
+
+.imageStackContainer .imageBottom{
+    grid-column: 1/5;
+    grid-row: 1/3;
+}
+
+.imageStackContainer .imageTop{
+ grid-column: 3/6;
+    grid-row: 2/3;
 }
 
 .productFrontGrid {
     grid-column: 5/9;
-    grid-row: 2;
+    grid-row: 1;
 }
 
 
@@ -652,7 +671,9 @@ h2 {
 }
 
 @media (min-width: 1355px) {
-
+.produktListFrontPage {
+    margin-inline: var(--margin-desktop);
+}
 }
 /* -----------------ABOUT ------------- */
 
@@ -900,7 +921,11 @@ grid-column: 3;
 }
 }
 
-
+@media (min-width: 1355px) {
+    .footerGrid {
+        padding-inline: var(--margin-desktop);
+    }
+}
 
 
 
@@ -911,9 +936,7 @@ grid-column: 3;
 
 
 @media (min-width: 810px) {
-   .menuKnap {
-    display: none;
-  }
+   
 
 }
 
@@ -927,8 +950,11 @@ grid-column: 3;
 
 @media (min-width: 1366px) {
   
+.menuKnap {
+    display: none;
+  }
 
-
+ 
     .logo {
         margin-left: var(--margin-desktop);
     }
@@ -957,10 +983,12 @@ grid-column: 3;
     height: 2px;
     bottom: -8px;
     left: 0;
-    background-color: #ef0e0e;
+    background-color: var(--primary-color-500);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
+
+  
 
   .deskNavLink:hover:after {
     transform: scaleX(1);
@@ -968,8 +996,170 @@ grid-column: 3;
   }
 
   .deskNavLink a {
-    color: white;
+    color: black;
   }
  
+   .byvandring::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 2px;
+    bottom: -8px;
+    left: 0;
+    background-color: var(--primary-color-500);
+    /* transform-origin: bottom right;
+    transition: transform 0.25s ease-out; */
+  }
 
 }
+
+
+
+
+
+
+
+
+
+
+/* Byvandring side html */
+
+
+/* Hero */
+
+.byvandringHeroSection {
+    background-image: url(/images/produktpagehero.webp);
+    background-position: 23% 50%;
+    object-fit:cover;
+    background-attachment: fixed;
+     background-repeat: no-repeat;
+   height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    position:relative;
+    margin-bottom: var(--section-padding-mobile);
+    
+}
+
+
+
+.byvandringHeroSection .ByvandringheroTextContainer {
+    margin-inline: var(--margin-mobile);
+    position: absolute;
+    top: 70%;
+}    
+    .ByvandringheroTextContainer h1 {
+    color: var(--white);
+    line-height: var();
+}
+
+
+
+/* Introtekst */
+
+
+.byvandringIntro {
+    margin-inline: var(--margin-mobile);
+    margin-bottom: var(--section-padding-desktop);
+}
+
+
+
+/* ProdukCard */
+
+
+.productCardSection {
+    margin-inline: var(--margin-mobile);
+ 
+}
+
+.flexContainer {
+      display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.flexContainer a {
+padding-bottom: var(--title-padding-mobile);
+padding-inline: var(--title-padding-mobile);
+}
+
+.productCard {
+height: 500px;
+width: 375px; 
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 90%;
+    position: relative;
+}
+
+.cardText {
+    position: absolute;
+    bottom: 2%;
+    left: 32px;
+   
+}
+
+.cardButton {
+    position: absolute;
+    border-radius: 50%;
+    border: none;
+    width: 48px;
+    height: 48px;
+    background-color: var(--primary-color-500);
+    right: 10%;
+    bottom: 7%;
+}
+
+.cardButton span {
+    color: white;
+}
+
+.cardTitle {
+     color: white;
+    font-size: var(--Text-size-Large);
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+.cardSubtekst {
+    color: white;
+    font-size: var(--text-size-body);
+    font-weight: 400;
+    letter-spacing: 1px;
+    opacity: var(--opacity-medium-emphasis);
+    max-width: 20ch;
+}
+
+
+.cardImg1 {
+    background-image: url(/images/labyrint.webp);
+}
+
+.cardImg2 {
+    background-image: url(/images/christianshavn.webp);
+}
+
+.cardImg3 {
+    background-image: url(/images/hcandersen.webp);
+    object-fit: cover;
+}
+
+.cardImg4 {
+    background-image: url(/images/havn.webp);
+}
+
+.cardImg5 {
+    background-image: url(/images/rosenborg.webp);
+}
+
+
+@media (min-width: 1366px) {
+
+
+}
+
