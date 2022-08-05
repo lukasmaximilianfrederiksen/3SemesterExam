@@ -105,8 +105,8 @@
   --text-leading-medium-mobile: 25px;
   --text-leading-base-mobile: 25px;
 
---text-leading-XXlarge-desktop: 65px;
-  --text-leading-Xlarge-desktop: 50px;
+--text-leading-XXlarge-desktop: 90px;
+  --text-leading-Xlarge-desktop: 65px;
   --text-leading-large-desktop: 30px;
   --text-leading-medium-desktop: 26px;
   --text-leading-base-desktop: 25px;
@@ -415,10 +415,10 @@ a:visited {
 .menu {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -5px;
   width: 100%;
   height: 100vh;
-  background-color: #FF7033;
+  background-color: var(--primary-color-500);
   transform: translateX(-100%);
 }
 
@@ -452,7 +452,7 @@ a:visited {
     margin-inline: var(--margin-mobile);
     position: absolute;
     top: 40%;
-    max-width: 55ch;
+    
 }
 
 .heroTextContainer h1 {
@@ -462,11 +462,52 @@ a:visited {
 
 .heroTextContainer p {
     color: var(--white);
+    max-width: 55ch;
 }
 
 .heroSubtext {
     padding-bottom: var(--paragraph-padding-mobile);
 }
+
+
+@media (min-width: 810px) {
+
+    .heroSection .heroTextContainer {
+    margin-inline: var(--margin-tablet);
+    position: absolute;
+    top: 40%;
+    
+}
+
+  .heroTextContainer h1 {
+    color: var(--white);
+     max-width: 100ch;
+    line-height: var(--text-leading-Xlarge-desktop);
+}
+
+.heroTextContainer p {
+max-width: 60ch;
+}
+
+}
+@media (min-width: 1366px) {
+    .heroSubtext {
+    padding-bottom: var(--title-padding-desktop);
+}
+
+.heroSection .heroTextContainer {
+    margin-inline: var(--margin-desktop);
+    position: absolute;
+    top: 40%;
+    max-width: 80ch;
+}
+
+.heroTextContainer h1 {
+    max-width: 100ch;
+    line-height: var(--text-leading-XXlarge-desktop);
+}
+}
+
 
 /* ------------Intro Section----------- */
 
@@ -477,12 +518,86 @@ h2 {
 
 .introText {
     margin-inline: var(--margin-mobile);
+   
 }
 
 .introText img {
     width: 100%;
     height: auto;
 }
+
+.introTextGrid{
+  
+    
+    max-width: 65ch;
+}
+
+
+@media (min-width: 810px) {
+.introText {
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    
+    gap: 16px;
+    margin-inline: var(--margin-tablet);
+}
+
+.introTextGrid{
+    grid-column: 1/5;
+    
+    max-width: 75ch;
+}
+
+
+
+.introImgGrid {
+    grid-column: 5/9;
+ 
+}
+
+}
+
+
+
+@media (min-width: 1355px) {
+.introText {
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows:1fr 3fr 1fr;
+    gap: 16px;
+    margin-inline: var(--margin-desktop);
+}
+
+.introTextGrid{
+    grid-column: 1/6;
+    grid-row: 2;
+    max-width: 75ch;
+}
+
+.introTextGrid h2 {
+    padding-bottom: var(--title-padding-desktop);
+    line-height: var(--text-leading-Xlarge-desktop);
+}
+
+
+.introImgGrid {
+    grid-column: 6/13;
+    grid-row: 1/4;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ----------Produktliste frontpage-------------- */
@@ -514,16 +629,96 @@ h2 {
     grid-row: 3/5;
 }
 
+@media (min-width: 810px) {
+    .produktListFrontPage {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows:  1fr 1fr 1fr 1fr;
+        gap: 16px;
+    }
+
+.imageStackContainer {
+    grid-column:  1/4;
+    grid-row: 1/4;
+}
+
+.productFrontGrid {
+    grid-column: 5/9;
+    grid-row: 2;
+}
+
+
+
+}
+
+@media (min-width: 1355px) {
+
+}
+/* -----------------ABOUT ------------- */
+
 
 .aboutFront {
     margin-top: -7rem;
-    
-    background-color: #ff4d0037;
+    background-color: var(--primary-color-200);
     padding-block: 3rem;
+    position: relative;
+    
 }
+
+
 
 .aboutFront .aboutbgwrap {
     margin-inline: var(--margin-mobile);
+}
+
+.aboutFront img {
+    display: none;
+}
+
+@media (min-width: 810px) {
+
+   
+.aboutFront .aboutbgwrap {
+display: grid;
+grid-template-columns: repeat(8, 1fr);
+margin-inline: var(--margin-tablet);
+}
+
+.textContentContainer {
+    grid-column: 1/5;
+}
+.aboutbgwrap {
+    position: relative;
+}
+
+
+
+.aboutbgwrap img {
+    display: block;
+    grid-column: 6/10;
+    width: 100%;
+    height: 60vh;
+     position: absolute;
+    top: 0;
+}
+}
+
+
+@media (min-width: 1366px) {
+
+    .aboutFront {
+        padding-block: 6rem;
+    }
+.aboutbgwrap img {
+    display: block;
+    grid-column: 6/9;
+    position: absolute;
+    width: 496px;
+    height: auto;
+    top: -50%;
+}
+
+
 }
 
 
@@ -533,6 +728,7 @@ h2 {
 
 .testimonialSection {
     margin-inline: var(--margin-mobile);
+
 }
 
 .h3flexContainer {
@@ -544,7 +740,8 @@ h2 {
     text-align: center;
     max-width: 24ch;
     padding-bottom: var(--section-padding-mobile);
-    line-height: var(--text-leading-large-mobile);
+    line-height: var(--text-leading-Xlarge-mobile);
+    font-size: var(--Text-size-XLarge);
 }
 
 
@@ -595,34 +792,113 @@ opacity: var(--opacity-low-emphasis);
 }
 
 
+@media (min-width: 810px) {
+    .testimonialSection {
+        margin-top: calc(var(--section-padding-desktop)*1.1);
+    }
 
+    .testimonialSection h3 {
+    text-align: center;
+    max-width: 24ch;
+    padding-bottom: var(--section-padding-mobile);
+    line-height: var(--text-leading-XXlarge-mobile);
+    font-size: var(--Text-size-XLarge);
+}
+
+}
+
+@media (min-width: 1355px) {
+    .testimonialSection {
+        margin-top: calc(var(--section-padding-desktop)*2);
+    }
+}
 
 
 /* Footer */
 
 footer {
     background-color: var(--footer-bg-color);
+    
 }
 
 footer section div p {
     color: white;
 }
 
+.footerTitle {
+    font-size: var(--Text-size-XLarge);
+    
+}
+
+.footerSubtitle {
+    font-size: var(--text-size-body);
+    opacity: var(--opacity-medium-emphasis);
+}
+
 footer section div li {
     color: white;
     font-family: var(--body-font-family);
     opacity: var(--opacity-low-emphasis);
+    font-weight: 400;
+    text-decoration: none; 
+}
+
+footer section div li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer section div li a:hover {
+    text-decoration: underline;
 }
 
 
 
+.footerGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-inline: var(--margin-mobile);
+    margin-top: var(--title-padding-mobile);
+    gap: 1rem;
+    padding-top: var(--title-padding-mobile);
+}
 
 
+.listHeader{
+    font-weight: 500;
+}
+.listFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.listFlex li {
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 810px) {
+    .footerGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+    padding-block: var(--section-padding-mobile);
+}
+ 
+.footerItemContainer1 {
+    grid-column: 1;
+}
 
 
+.footerItemContainer2{
+grid-column: 2;
+}
 
 
-
+.footerItemContainer3 {
+grid-column: 3;
+}
+}
 
 
 
