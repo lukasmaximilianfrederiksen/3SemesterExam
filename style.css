@@ -44,15 +44,15 @@
   --white: #ffffff;
   --darkGrey: #202020;
 
-  --primary-color-600: hsl(20, 100, 50);
-  --primary-color-500: hsl(20, 100, 60);
-  --primary-color-400: hsl(20, 100, 70);
-  --primary-color-300: hsl(20, 100, 80);
-  --primary-color-200: hsl(20, 100, 90);
-  --primary-color-100: hsl(20, 100, 99);
+  --primary-color-600: #FF5500;
+  --primary-color-500: #FF7033;
+  --primary-color-400: #FF9466;
+  --primary-color-300: #FFB799;
+  --primary-color-200: #FFDBCC;
+  --primary-color-100: #FFF8F5;
 
-  --alert-color: hsl(348, 79, 49);
-  --succes-color: hsl(143, 79, 39);
+  --alert-color: #ED0D38;
+  --succes-color: #15B250;
 
   /* Font families */
 
@@ -121,7 +121,6 @@
   --title-padding-desktop: 32px;
 
   --paragraph-padding-mobile: 16px ;
-
   --paragraph-padding-mobile: 24px ;
 
   --grid-gap-mobile: 10px;
@@ -130,6 +129,9 @@
   --margin-mobile: 16px;
   --margin-tablet: 96px;
   --margin-desktop: 128px;
+
+
+  --testimonial-inline-padding: 40px;
 
   /* Box shadows */
 
@@ -523,6 +525,104 @@ h2 {
 .aboutFront .aboutbgwrap {
     margin-inline: var(--margin-mobile);
 }
+
+
+
+/* ------------Testimonial section---------- */
+
+
+.testimonialSection {
+    margin-inline: var(--margin-mobile);
+}
+
+.h3flexContainer {
+    display: flex;
+    justify-content: center;
+   
+}
+.testimonialSection h3 {
+    text-align: center;
+    max-width: 24ch;
+    padding-bottom: var(--section-padding-mobile);
+    line-height: var(--text-leading-large-mobile);
+}
+
+
+/* testimonial card component */
+
+.testimonialFlexcontainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    
+}
+
+
+.testimonialCardContainer {
+    /* padding-block: var(--title-padding-mobile); */
+    padding-inline: var(--testimonial-inline-padding);
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+    width: 300px;
+    height: 350px;
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    border-radius: 8px;
+    margin-bottom: var(--title-padding-mobile);
+    position: relative;
+    
+    
+}
+
+.testimonialCardContainer  svg {
+    height: 44px;
+    position: absolute;
+    top: 5px;
+}
+
+.testimonialCardContainer > * {
+    margin-top: var(--paragraph-padding-mobile);
+    max-width: 25ch;
+}
+.cardPerson {
+opacity: var(--opacity-low-emphasis);
+}
+
+.cardStory {
+    padding-top: var(--section-padding-mobile);
+}
+
+
+
+
+
+/* Footer */
+
+footer {
+    background-color: var(--footer-bg-color);
+}
+
+footer section div p {
+    color: white;
+}
+
+footer section div li {
+    color: white;
+    font-family: var(--body-font-family);
+    opacity: var(--opacity-low-emphasis);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
