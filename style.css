@@ -107,8 +107,8 @@
   --text-leading-XXlarge-desktop: 90px;
   --text-leading-Xlarge-desktop: 45px;
   --text-leading-large-desktop: 30px;
-  --text-leading-medium-desktop: 26px;
-  --text-leading-base-desktop: 25px;
+  --text-leading-medium-desktop: 28px;
+  --text-leading-base-desktop: 27px;
 
   /* Spacing Variables*/
 
@@ -581,7 +581,7 @@ h2 {
   .imageStackContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: minmax(100px, 1fr);
     gap: 8px;
     margin-top: var(--section-padding-mobile);
   }
@@ -592,24 +592,30 @@ h2 {
   }
 
   .imageStackContainer .imageBottom {
-    grid-column: 1/5;
+    grid-column: 1/4;
     grid-row: 1/3;
   }
 
   .imageStackContainer .imageTop {
     grid-column: 3/6;
-    grid-row: 2/3;
+    grid-row: 2/4;
+    margin-bottom: 5rem;
   }
 
   .productFrontGrid {
     grid-column: 5/9;
     grid-row: 1;
+    padding-top: var(--title-padding-desktop);
   }
 }
 
 @media (min-width: 1355px) {
   .produktListFrontPage {
     margin-inline: var(--margin-desktop);
+  }
+
+  .productFrontGrid {
+    padding-top: var(--section-padding-desktop);
   }
 }
 /* -----------------ABOUT ------------- */
@@ -668,6 +674,10 @@ h2 {
     width: 496px;
     height: auto;
     top: -50%;
+  }
+
+  .imageStackContainer {
+    margin-top: 0;
   }
 }
 
