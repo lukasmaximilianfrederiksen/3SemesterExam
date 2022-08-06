@@ -195,6 +195,12 @@ p {
   max-width: 70ch;
 }
 
+@media (min-width: 1355px) {
+  p {
+    line-height: var(--text-leading-base-desktop);
+  }
+}
+
 /* Buttons components */
 
 .cta {
@@ -1182,12 +1188,13 @@ footer section div li a:hover {
 
 .prisLabel {
   padding-bottom: 8px;
-  font-size: var(--Text-size-Large);
+  font-size: var(--text-size-body);
   opacity: var(--opacity-medium-emphasis);
 }
 
 .bookInfoContainer {
   padding-top: 2rem;
+  display: inline-grid;
 }
 .pris {
   font-weight: 600;
@@ -1196,6 +1203,46 @@ footer section div li a:hover {
 .smallInfo {
   opacity: var(--opacity-low-emphasis);
   font-size: var(--text-size-body-small);
+}
+
+@media (min-width: 810px) {
+  .singleIntro {
+    margin-inline: var(--margin-tablet);
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: var(--grid-gap-desktop);
+  }
+
+  .singleIntro h2 {
+    line-height: var(--text-leading-Xlarge-desktop);
+  }
+
+  .singleIntroContainer {
+    grid-column: 1/5;
+  }
+
+  .bookContainer {
+    grid-column: 5/9;
+  }
+}
+
+@media (min-width: 1355px) {
+  .singleIntro {
+    margin-inline: var(--margin-desktop);
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .singleIntroContainer {
+    grid-column: 1/7;
+  }
+
+  .bookContainer {
+    grid-column: 9/13;
+  }
+
+  .booktur {
+    justify-self: center;
+  }
 }
 
 /* oplevelse section singleproduct */
