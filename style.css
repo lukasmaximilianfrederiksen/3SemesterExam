@@ -170,6 +170,9 @@ article {
   margin-bottom: var(--section-padding-mobile);
 }
 
+a {
+  text-decoration: none;
+}
 /*  ------------------text styling -----------*/
 
 h1,
