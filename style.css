@@ -173,6 +173,10 @@ article {
 a {
   text-decoration: none;
 }
+
+.logoWrapper a {
+  color: black;
+}
 /*  ------------------text styling -----------*/
 
 h1,
