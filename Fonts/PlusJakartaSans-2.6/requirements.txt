@@ -1,4 +1,0 @@
-fontbakery
-fontmake
-gftools
-brotli
